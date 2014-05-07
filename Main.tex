@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt]{article}
+
+% Packages.
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage{comment} % Comment multiple lines.
+\usepackage{spverbatim} % Pasting large amounts of texts such as SQL code.
+\usepackage[utf8]{inputenc} % Use UTF 8. This allows æ, ø, å.
+\usepackage{alltt}
+\usepackage{float}
+\usepackage{url} % Used for URLs.
+\usepackage{fancyhdr} % For header and footer.
+\usepackage{natbib} % For BibTeX.
+\usepackage{lastpage} % For finding total number of pages.
+\usepackage{times}
+
+\linespread{1.5}
+
+% Commands.
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % Custom command used for tables.
+\newcommand{\specialcell}[1]{\begin{tabular}{@{}c@{}#1\end{tabular}}}
+\newcommand{\CS}{C\nolinebreak\hspace{-.05em}\raisebox{.6ex}{\tiny\bf \#}}
+
+% Author and title for the frontpage.
+\title{The power of information}
+\author{Reflecsion over IT\\Michael Søby Andersen\\msoa@itu.dk\\IT University of Copenhagen}
+\pagestyle{fancy}
+
+\begin{document}
+% Save section name in \markright. Used in header.
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+% Header.
+\lhead{\textbf{\rightmark}\\The power of information by Michael Søby Andersen}
+\rhead{IT University of Copehagen\\\today}
+% Footer.
+\cfoot{\thepage\ of \pageref{LastPage}}
+% Frontpage.
+\maketitle
+\tableofcontents
+\newpage
+
+% Inputs.
+\input{texts/Introduction.tex}
+\input{texts/Glass.tex}
+\input{texts/Phenomenology.tex}
+\input{texts/Analysis.tex}
+\input{texts/Discussion.tex}
+\input{texts/Conclusion.tex}
+
+% Add bibliography.
+\bibliographystyle{cell}
+\bibliography{bib}
+\end{document}
