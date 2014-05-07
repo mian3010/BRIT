@@ -88,3 +88,9 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+
+# VIM
+*.vim
+*._log
+*._aux
+*_aux
