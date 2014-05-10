@@ -16,13 +16,22 @@
 \usepackage{natbib} % For BibTeX.
 \usepackage{lastpage} % For finding total number of pages.
 \usepackage{times}
+\usepackage{csquotes} % Used for setup of blockquotes.
+\usepackage{titlesec} % For cancelling out spacing after headers
+\usepackage{parskip}
 
 \linespread{1.5}
 
 % Commands.
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % Custom command used for tables.
 \newcommand{\specialcell}[1]{\begin{tabular}{@{}c@{}#1\end{tabular}}}
-\newcommand{\CS}{C\nolinebreak\hspace{-.05em}\raisebox{.6ex}{\tiny\bf \#}}
+
+% Page setup
+\setlength{\parskip}{4mm} % Set spacing between paragraphs
+\setlength{\parindent}{7mm} % Set indent for paragraphs
+\titlespacing*{\section}{0pt}{\parskip}{-\parskip} % Cancel out spacing after headers due to parskip. Star removes indentation of first paragraph.
+\titlespacing*{\subsection}{0pt}{\parskip}{-\parskip} % Same as above
+\titlespacing*{\subsubsection}{0pt}{\parskip}{-\parskip} % Same as above
 
 % Author and title for the frontpage.
 \title{The power of information}
@@ -44,20 +53,13 @@
 
 % Inputs.
 \input{texts/Introduction.tex}
-\input{texts/Ubiquitous_Computing.tex}
 \input{texts/Privacy.tex}
-\input{texts/Panopticon_Oligopticon.tex}
-\input{texts/Information.tex}
-\input{texts/Information.Daily_life.tex}
-\input{texts/Information.Sharing.tex}
-\input{texts/Information_services.tex}
-\input{texts/Information_services.Service_agreements.tex}
-\input{texts/Information_services.Google.tex}
-\input{texts/Information_services.Google.Glass.tex}
-\input{texts/Information_services.Facebook.tex}
-\input{texts/Information_services.Dropbox.tex}
+\input{texts/Ethics-and-morality.tex}
+\input{texts/Controlling-thoughts.tex}
+\input{texts/Democracy-in-the-modern-age.tex}
 
 % Add bibliography.
 \bibliographystyle{cell}
 \bibliography{bib}
+
 \end{document}
