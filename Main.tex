@@ -19,6 +19,7 @@
 \usepackage{csquotes} % Used for setup of blockquotes.
 \usepackage{titlesec} % For cancelling out spacing after headers
 \usepackage{parskip}
+\usepackage{pdfpages} % For including PDF into document.
 
 \linespread{1.5}
 
@@ -47,6 +48,7 @@
 % Footer.
 \cfoot{\thepage\ of \pageref{LastPage}}
 % Frontpage.
+\includepdf{frontpage.pdf}
 \maketitle
 \tableofcontents
 \newpage
